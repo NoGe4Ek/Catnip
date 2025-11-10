@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2f88c0-dbe0-44df-b63c-64fa2fe821f6" name="Changes" comment="" />
+    <list default="true" id="df2f88c0-dbe0-44df-b63c-64fa2fe821f6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/TipUi.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/TipUi.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/FloatingText.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/FloatingText.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/LookAtPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/LookAtPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Sales/BuyableComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Sales/BuyableComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Catnip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Catnip/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/DI/G.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/DI/G.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +34,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;NoGe4Ek&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/NoGe4Ek/Catnip.git&quot;,
+    &quot;accountId&quot;: &quot;a497227d-900b-4923-984b-0e9448c7dbb2&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2579e7234cb64ac89d53050629ee5bbe2ae00/cf/de225206/Physics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2f565d214ab4e3d9e060571ada8f3d91df800/64/61812ece/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2f565d214ab4e3d9e060571ada8f3d91df800/f6/d0ff6f09/Time.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/BasketballCounterController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -29,8 +61,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/NetManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/SessionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/TaskManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/TipUi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/Models/PersonView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/Extensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/FloatingText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/LookAtPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Backpack/BackpackController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Customer/CustomerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Customer/NpcController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -75,6 +110,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.244373&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -205,7 +241,7 @@
       <workItem from="1762448417547" duration="5897000" />
       <workItem from="1762541257317" duration="3650000" />
       <workItem from="1762600282905" duration="1968000" />
-      <workItem from="1762690007241" duration="544000" />
+      <workItem from="1762690007241" duration="17283000" />
     </task>
     <servers />
   </component>
@@ -237,6 +273,19 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/FloatingText.cs</url>
+          <line>16</line>
+          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\Utils\FloatingText.cs" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="429" />
+            </startOffsets>
+            <endOffsets>
+              <option value="544" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

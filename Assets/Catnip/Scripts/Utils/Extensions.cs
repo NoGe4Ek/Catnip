@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Random = System.Random;
+
 namespace Catnip.Scripts.Utils {
 public static class Extensions {
     private static readonly Random Random = new();
@@ -23,14 +24,20 @@ public static class Extensions {
         return array[Random.Next(0, array.Length)];
     }
 
+    public static bool IsInLayer(this RaycastHit hit, LayerMask layerMask) {
+        return layerMask == (layerMask | (1 << hit.collider.gameObject.layer));
+    }
+
     // ПОИСК ВСЕХ ОБЪЕКТОВ ОПРЕДЕЛЕННОГО ТИПА СРЕДИ ДЕТЕЙ, РЕКУРСИВНО
-    public static List<T> FindComponentsInChildrenRecursive<T>(this GameObject parent, bool findOnlyInActiveInHierarchy = true) where T : Component {
+    public static List<T> FindComponentsInChildrenRecursive<T>(this GameObject parent,
+        bool findOnlyInActiveInHierarchy = true) where T : Component {
         List<T> components = new List<T>();
         FindComponentsRecursive(parent, ref components, findOnlyInActiveInHierarchy);
         return components;
     }
 
-    private static void FindComponentsRecursive<T>(GameObject current, ref List<T> components, bool findOnlyInActiveInHierarchy) where T : Component {
+    private static void FindComponentsRecursive<T>(GameObject current, ref List<T> components,
+        bool findOnlyInActiveInHierarchy) where T : Component {
         // Ищем только в активных объектах
         if (findOnlyInActiveInHierarchy && !current.activeInHierarchy)
             return;
@@ -69,8 +76,9 @@ public static class Extensions {
         // Для геймпада - возвращаем центр экрана
         return new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
     }
-    
-    public static void DrawSphereCastDebug(Vector3 origin, Vector3 direction, float radius, float distance, Color color) {
+
+    public static void DrawSphereCastDebug(Vector3 origin, Vector3 direction, float radius, float distance,
+        Color color) {
         // Рисуем линию направления
         Debug.DrawRay(origin, direction * distance, color, 2f);
 
@@ -107,7 +115,7 @@ public static class Extensions {
             Debug.DrawLine(p1, p2, color, 2f);
         }
     }
-    
+
     // DEEP COPY
     //         GameObject tempCopy = new GameObject("TempCopy");
     // CopyAllComponentsRecursively(tileObject, tempCopy);
@@ -139,11 +147,12 @@ public static class Extensions {
     //         CopyAllComponentsRecursively(sourceChild.gameObject, destChild);
     //     }
     // }
-    
-    public static void DrawSphereCastDebug(Ray ray, float sphereCastRadius, float interactionDistance, LayerMask interactableLayer)
-    {
+
+    public static void DrawSphereCastDebug(Ray ray, float sphereCastRadius, float interactionDistance,
+        LayerMask interactableLayer) {
         // Выполняем SphereCast для дебага
-        bool hasHit = Physics.SphereCast(ray, sphereCastRadius, out RaycastHit hit, interactionDistance, interactableLayer);
+        bool hasHit = Physics.SphereCast(ray, sphereCastRadius, out RaycastHit hit, interactionDistance,
+            interactableLayer);
 
         // Настройки визуализации
         Color rayColor = hasHit ? Color.green : Color.red;
@@ -156,48 +165,44 @@ public static class Extensions {
         // Рисуем начальную сферу
         DrawDebugSphere(ray.origin, sphereCastRadius, sphereColor, duration);
 
-        if (hasHit)
-        {
+        if (hasHit) {
             // Рисуем сферу в точке попадания
             DrawDebugSphere(hit.point, sphereCastRadius, Color.yellow, duration);
-            
+
             // Рисуем нормаль
             Debug.DrawRay(hit.point, hit.normal * 0.5f, Color.blue, duration);
-            
+
             // Рисуем линию от начала до точки попадания
             Debug.DrawLine(ray.origin, hit.point, Color.cyan, duration);
-            
+
             Debug.Log($"SphereCast hit: {hit.collider.name} at distance {hit.distance:F2}");
-        }
-        else
-        {
+        } else {
             // Рисуем сферу в конце дистанции
             Vector3 endPoint = ray.origin + ray.direction * interactionDistance;
             DrawDebugSphere(endPoint, sphereCastRadius, sphereColor, duration);
-            
+
             Debug.Log("SphereCast didn't hit anything");
         }
     }
 
-    private static void DrawDebugSphere(Vector3 center, float radius, Color color, float duration)
-    {
+    private static void DrawDebugSphere(Vector3 center, float radius, Color color, float duration) {
         // Рисуем три ортогональных круга для визуализации сферы
         DrawDebugCircle(center, Vector3.forward, Vector3.up, radius, color, duration);
         DrawDebugCircle(center, Vector3.up, Vector3.right, radius, color, duration);
         DrawDebugCircle(center, Vector3.right, Vector3.forward, radius, color, duration);
     }
 
-    private static void DrawDebugCircle(Vector3 center, Vector3 normal, Vector3 axis, float radius, Color color, float duration)
-    {
+    private static void DrawDebugCircle(Vector3 center, Vector3 normal, Vector3 axis, float radius, Color color,
+        float duration) {
         int segments = 36;
         float angleStep = 360f / segments;
-        
+
         Vector3 previousPoint = center + axis * radius;
-        
-        for (int i = 1; i <= segments; i++)
-        {
+
+        for (int i = 1; i <= segments; i++) {
             float angle = i * angleStep * Mathf.Deg2Rad;
-            Vector3 point = center + (axis * Mathf.Cos(angle) + Vector3.Cross(normal, axis) * Mathf.Sin(angle)) * radius;
+            Vector3 point =
+                center + (axis * Mathf.Cos(angle) + Vector3.Cross(normal, axis) * Mathf.Sin(angle)) * radius;
             Debug.DrawLine(previousPoint, point, color, duration);
             previousPoint = point;
         }

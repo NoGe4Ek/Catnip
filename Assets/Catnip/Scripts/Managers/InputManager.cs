@@ -1,11 +1,20 @@
 ﻿using Catnip.Scripts.DI;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 namespace Catnip.Scripts.Managers {
 public class InputManager : MonoBehaviour {
-    public InputAction moveAction, lookAction, jumpAction, interactPrimaryAction, interactSecondaryAction, interactTertiaryAction;
+    public InputAction moveAction,
+        lookAction,
+        jumpAction,
+        interactPrimaryAction,
+        interactSecondaryAction,
+        interactTertiaryAction;
 
     private Vector2 moveVector, lookVector;
+    private bool isPause;
+
     public void Start() {
         moveAction = InputSystem.actions.FindAction("Move");
         moveAction.performed += ctx => moveVector = ctx.ReadValue<Vector2>();
@@ -33,18 +42,24 @@ public class InputManager : MonoBehaviour {
 
         interactTertiaryAction = InputSystem.actions.FindAction("InteractTertiary");
         interactTertiaryAction.started += _ => G.Instance.interactionManager.InteractTertiary();
-        
+
         interactTertiaryAction = InputSystem.actions.FindAction("Throw");
         interactTertiaryAction.started += _ => G.Instance.interactionManager.Throw();
-        
+
         interactTertiaryAction = InputSystem.actions.FindAction("Backpack");
         interactTertiaryAction.started += _ => G.Instance.interactionManager.Backpack();
-        
+
         interactTertiaryAction = InputSystem.actions.FindAction("Spawn");
         interactTertiaryAction.started += _ => G.Instance.interactionManager.Spawn();
-        
+
         interactTertiaryAction = InputSystem.actions.FindAction("Test");
         interactTertiaryAction.started += _ => G.Instance.interactionManager.Test();
+
+        interactTertiaryAction = InputSystem.actions.FindAction("Pause");
+        interactTertiaryAction.started += _ => {
+            isPause = !isPause;
+            G.Instance.firstPersonCamera.GetComponent<CinemachineBrain>().enabled = !isPause;
+        };
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -52,8 +67,8 @@ public class InputManager : MonoBehaviour {
 
     public void Update() {
         if (G.Instance.movementManager.playerController == null) return;
-        G.Instance.movementManager.Move(moveVector);
-        G.Instance.movementManager.Rotate(lookVector);
+        if (!isPause) G.Instance.movementManager.Move(moveVector);
+        if (!isPause) G.Instance.movementManager.Rotate(lookVector);
     }
 }
 }

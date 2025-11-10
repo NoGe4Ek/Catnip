@@ -8,6 +8,9 @@ public class G : MonoBehaviour {
     [SerializeField] public bool useLogging;
     
     [Header("Other")]
+    [SerializeField] public Transform tipsContainer;
+    [SerializeField] public GameObject tipPrefab;
+    [SerializeField] public Canvas firstPersonCameraCanvas;
     [SerializeField] public Camera firstPersonCamera;
     [SerializeField] public Camera thirdPersonCamera;
     [SerializeField] public MovementManager movementManager;

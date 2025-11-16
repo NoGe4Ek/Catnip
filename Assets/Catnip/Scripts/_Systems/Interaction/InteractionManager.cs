@@ -2,9 +2,9 @@
 using Catnip.Scripts._Systems.Backpack;
 using Catnip.Scripts._Systems.Customer;
 using Catnip.Scripts._Systems.Gardening;
+using Catnip.Scripts._Systems.Interaction.Components;
 using Catnip.Scripts._Systems.Sales;
 using Catnip.Scripts._Systems.Slots;
-using Catnip.Scripts.Components;
 using Catnip.Scripts.Controllers;
 using Catnip.Scripts.DI;
 using Catnip.Scripts.Utils;
@@ -17,57 +17,66 @@ public class InteractionManager : NetworkBehaviour {
     [SerializeField] public float holdDistance;
     [SerializeField] private float sphereCastRadius = 0.2f;
     [SerializeField] private float interactionDistance = 2f;
-    [SerializeField] private LayerMask interactableLayer;
-    [SerializeField] private LayerMask storageLayer;
     [SerializeField] private float throwForce = 10f;
 
     void FixedUpdate() {
         UpdateFocus();
     }
 
-    NetworkInteractableComponent lastInteractable;
-    GameObject lastStorage;
+    FocusableComponent lastFocusable;
+    SlotsController lastStorage;
     BuyableComponent lastBuyable;
 
     void UpdateFocus() {
         Ray ray = G.Instance.firstPersonCamera.ScreenPointToRay(Extensions.GetMousePosition());
-        if (Physics.SphereCast(ray, 0.01f, out RaycastHit hit, interactionDistance, interactableLayer | storageLayer)) {
-            if (hit.collider.TryGetComponent(out BuyableComponent buyableComponent)) {
-                buyableComponent.OnFocus();
-                if (lastBuyable != null && lastBuyable != buyableComponent) lastBuyable.OnUnfocus();
-                lastBuyable = buyableComponent;
-                // todo отрефакторить NetworkInteractableComponent => HoldableComponent + OutlineComponent
-                if (hit.collider.TryGetComponent(out NetworkInteractableComponent interactable)) {
-                    interactable.OnFocus();
-                    if (lastInteractable != null && lastInteractable != interactable) lastInteractable.OnUnfocus();
-                    lastInteractable = interactable;
+        if (Physics.SphereCast(ray, 0.01f, out RaycastHit hit, interactionDistance,
+                G.Instance.holdableLayer | G.Instance.storageZoneLayer)) {
+            if (hit.collider.TryGetComponent(out BuyableComponent buyable)) {
+                if (hit.collider.TryGetComponent(out FocusableComponent focusable)) {
+                    buyable.OnFocus();
+                    focusable.OnFocus();
+                    UpdateUnfocus(buyable: buyable, focusable: focusable);
+                    lastBuyable = buyable;
+                    lastFocusable = focusable;
                 }
-            } else if (hit.collider.TryGetComponent(out NetworkInteractableComponent interactable)) {
-                interactable.OnFocus();
-                if (lastInteractable != null && lastInteractable != interactable) lastInteractable.OnUnfocus();
-                lastInteractable = interactable;
-            } else if (hit.IsInLayer(storageLayer.value)) {
-                GameObject storage = hit.collider.gameObject.FindComponentsInChildrenRecursive<SlotsController>(false)
-                    .First().gameObject;
-                storage.SetActive(true);
-                if (lastStorage != null && lastStorage != storage) lastStorage.SetActive(false);
+            } else if (hit.collider.TryGetComponent(out FocusableComponent focusable)) {
+                focusable.OnFocus();
+                UpdateUnfocus(focusable: focusable);
+                lastFocusable = focusable;
+            } else if (hit.IsInLayer(G.Instance.storageZoneLayer.value) &&
+                       PlayerController.LocalPlayer.currentHoldItem != null) {
+                SlotsController storage = hit.collider.gameObject
+                    .FindComponentsInChildrenRecursive<SlotsController>(false)
+                    .First();
+                storage.gameObject.SetActive(true);
+                UpdateUnfocus(storage: storage);
                 lastStorage = storage;
             }
         } else {
-            if (lastInteractable != null) {
-                lastInteractable.OnUnfocus();
-                lastInteractable = null;
-            }
+            UpdateUnfocus();
+        }
+    }
 
-            if (lastStorage != null) {
-                lastStorage.SetActive(false);
-                lastStorage = null;
-            }
+    private void UpdateUnfocus(FocusableComponent focusable = null, SlotsController storage = null,
+        BuyableComponent buyable = null) {
+        if ((lastFocusable != null && focusable == null) ||
+            (lastFocusable != null && focusable != null && lastFocusable != focusable)) {
+            lastFocusable.OnUnfocus();
+            lastFocusable = null;
+        }
 
-            if (lastBuyable != null) {
-                lastBuyable.OnUnfocus();
-                lastBuyable = null;
-            }
+        if (((lastStorage != null && storage == null) ||
+             (lastStorage != null && storage != null && lastStorage != storage))
+            && lastStorage.IsSlotsEmpty()
+           ) {
+            lastStorage.gameObject.SetActive(false);
+            lastStorage = null;
+        }
+
+        if ((lastBuyable != null && buyable == null) ||
+            (lastBuyable != null && buyable != null && lastBuyable != buyable)) {
+            lastBuyable.OnUnfocus();
+            lastBuyable = null;
         }
     }
 
@@ -76,23 +85,22 @@ public class InteractionManager : NetworkBehaviour {
         Ray ray = G.Instance.firstPersonCamera.ScreenPointToRay(Extensions.GetMousePosition());
         if (PlayerController.LocalPlayer.currentHoldItem == null) {
             // Реализация на SphereCast
-            // Extensions.DrawSphereCastDebug(ray, sphereCastRadius, interactionDistance, interactableLayer);
+            // Extensions.DrawSphereCastDebug(ray, sphereCastRadius, interactionDistance, holdableLayer);
             // Ray ray = G.Instance.firstPersonCamera.ScreenPointToRay(Extensions.GetMousePosition());
-            // if (Physics.SphereCast(ray, sphereCastRadius, out RaycastHit hit, interactionDistance, interactableLayer)) {
-            //     NetworkInteractableComponent interactable = hit.collider.GetComponent<NetworkInteractableComponent>();
-            //     CmdTryPickup(interactable);
+            // if (Physics.SphereCast(ray, sphereCastRadius, out RaycastHit hit, interactionDistance, holdableLayer)) {
+            //     NetworkHoldableComponent holdable = hit.collider.GetComponent<NetworkHoldableComponent>();
+            //     CmdTryPickup(holdable);
             // }
 
 
-            if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, interactableLayer | storageLayer)) {
-                if (hit.collider.TryGetComponent(out NetworkInteractableComponent interactable) &&
-                    interactable.isHoldable) {
-                    CmdTryPickup(interactable, null);
+            if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance,
+                    G.Instance.holdableLayer | G.Instance.storageLayer)) {
+                if (hit.collider.TryGetComponent(out NetworkHoldableComponent holdable)) {
+                    CmdTryPickup(holdable, null);
                 } else if (hit.collider.TryGetComponent(out SlotController slotController)) {
                     if (slotController.storeObject != null &&
-                        slotController.storeObject.TryGetComponent(
-                            out NetworkInteractableComponent interactableFromStore)) {
-                        CmdTryPickup(interactableFromStore, slotController);
+                        slotController.storeObject.TryGetComponent(out NetworkHoldableComponent holdableFromStore)) {
+                        CmdTryPickup(holdableFromStore, slotController);
                     }
                 } else if (hit.collider.TryGetComponent(out BuyableComponent buyableComponent)) {
                     CmdBuy(hit.collider.gameObject);
@@ -101,7 +109,7 @@ public class InteractionManager : NetworkBehaviour {
         } else {
             if (!PlayerController.LocalPlayer.currentHoldItem.TryGetComponent(out StorableComponent storableComponent))
                 return;
-            if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, storageLayer)) {
+            if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, G.Instance.storageLayer)) {
                 if (!hit.collider.TryGetComponent(out SlotController slotController)) return;
                 CmdStoreItem(storableComponent, slotController);
             }
@@ -111,11 +119,11 @@ public class InteractionManager : NetworkBehaviour {
     public void InteractSecondary() {
         if (PlayerController.LocalPlayer.currentHoldItem == null) return;
 
-        NetworkInteractableComponent interactable =
-            PlayerController.LocalPlayer.currentHoldItem.GetComponent<NetworkInteractableComponent>();
-        Rigidbody rb = interactable.GetComponent<Rigidbody>();
+        NetworkHoldableComponent holdable =
+            PlayerController.LocalPlayer.currentHoldItem.GetComponent<NetworkHoldableComponent>();
+        Rigidbody rb = holdable.GetComponent<Rigidbody>();
         rb.isKinematic = false;
-        interactable.GetComponent<Collider>().isTrigger = false;
+        holdable.GetComponent<Collider>().isTrigger = false;
         rb.AddForce(Vector3.zero, ForceMode.Impulse);
 
         CmdDropItem();
@@ -141,11 +149,11 @@ public class InteractionManager : NetworkBehaviour {
             // Добавляем скорость игрока к броску
             Vector3 totalThrowForce = (throwDirection * throwForce) + (playerVelocity * 0.5f);
 
-            NetworkInteractableComponent interactable =
-                PlayerController.LocalPlayer.currentHoldItem.GetComponent<NetworkInteractableComponent>();
-            Rigidbody rb = interactable.GetComponent<Rigidbody>();
+            NetworkHoldableComponent holdable =
+                PlayerController.LocalPlayer.currentHoldItem.GetComponent<NetworkHoldableComponent>();
+            Rigidbody rb = holdable.GetComponent<Rigidbody>();
             rb.isKinematic = false;
-            interactable.GetComponent<Collider>().isTrigger = false;
+            holdable.GetComponent<Collider>().isTrigger = false;
             rb.AddForce(totalThrowForce, ForceMode.Impulse);
 
             CmdThrowItem(totalThrowForce);
@@ -156,7 +164,8 @@ public class InteractionManager : NetworkBehaviour {
         Ray ray = G.Instance.firstPersonCamera.ScreenPointToRay(Extensions.GetMousePosition());
         if (PlayerController.LocalPlayer.currentHoldItem == null) {
             if (PlayerController.LocalPlayer.backpack == null) {
-                if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, interactableLayer | storageLayer)) {
+                if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance,
+                        G.Instance.holdableLayer | G.Instance.storageLayer)) {
                     if (hit.collider.TryGetComponent(out BackpackController backpackController)) {
                         CmdBackpack(backpackController);
                     }
@@ -206,7 +215,7 @@ public class InteractionManager : NetworkBehaviour {
         NetworkConnectionToClient senderOrHost = sender ?? PlayerController.LocalPlayer.connectionToClient;
         PlayerController playerController = SessionManager.Instance.players[senderOrHost];
 
-        playerController.currentHoldItem.GetComponent<NetworkInteractableComponent>().ServerDrop();
+        playerController.currentHoldItem.GetComponent<NetworkHoldableComponent>().ServerDrop();
         playerController.currentHoldItem = null;
 
         storableComponent.netIdentity.RemoveClientAuthority();
@@ -219,18 +228,18 @@ public class InteractionManager : NetworkBehaviour {
         PlayerController playerController = SessionManager.Instance.players[senderOrHost];
 
         BuyableComponent buyableComponent = buyableObject.GetComponent<BuyableComponent>();
-        NetworkInteractableComponent interactableFromBuy = buyableComponent.Buy(senderOrHost);
+        NetworkHoldableComponent holdableFromBuy = buyableComponent.Buy(senderOrHost);
         // todo потенциально проблемное место, так как нужно переслать sender
-        CmdTryPickup(interactableFromBuy, null, sender);
+        CmdTryPickup(holdableFromBuy, null, sender);
     }
 
     [Command(requiresAuthority = false)]
-    void CmdTryPickup(NetworkInteractableComponent interactable, SlotController slotController,
+    void CmdTryPickup(NetworkHoldableComponent holdable, SlotController slotController,
         NetworkConnectionToClient sender = null) {
         NetworkConnectionToClient senderOrHost = sender ?? PlayerController.LocalPlayer.connectionToClient;
         PlayerController playerController = SessionManager.Instance.players[senderOrHost];
 
-        if (interactable == null || interactable.isHold || !interactable.isHoldable) return;
+        if (holdable == null || holdable.isHold) return;
 
         // Пытаемся взять предмет из Store
         if (slotController != null) {
@@ -238,16 +247,16 @@ public class InteractionManager : NetworkBehaviour {
         }
 
         // Пробуем присваивать net identity
-        interactable.netIdentity.RemoveClientAuthority();
-        interactable.netIdentity.AssignClientAuthority(senderOrHost);
-        playerController.currentHoldItem = interactable.gameObject;
-        // interactable.GetComponent<NetworkTransformHybrid>().syncDirection = SyncDirection.ClientToServer;
-        interactable.ServerPickup(playerController.netIdentity);
+        holdable.netIdentity.RemoveClientAuthority();
+        holdable.netIdentity.AssignClientAuthority(senderOrHost);
+        playerController.currentHoldItem = holdable.gameObject;
+        // holdable.GetComponent<NetworkTransformHybrid>().syncDirection = SyncDirection.ClientToServer;
+        holdable.ServerPickup(playerController.netIdentity);
 
         // Проверяем, что предмет не занят другим игроком
-        // if (interactable.holder == null) {
-        //     playerController.currentHoldItem = interactable.gameObject;
-        //     interactable.ServerPickup(playerController.netIdentity);
+        // if (holdable.holder == null) {
+        //     playerController.currentHoldItem = holdable.gameObject;
+        //     holdable.ServerPickup(playerController.netIdentity);
         // }
     }
 
@@ -260,13 +269,13 @@ public class InteractionManager : NetworkBehaviour {
         // Vector3 playerVelocity = playerController.characterController.velocity;
         // Vector3 totalThrowForce = (throwDirection * throwForce) + (playerVelocity * 0.5f);
 
-        NetworkInteractableComponent interactable =
-            playerController.currentHoldItem.GetComponent<NetworkInteractableComponent>();
-        // interactable.GetComponent<NetworkTransformHybrid>().syncDirection = SyncDirection.ServerToClient;
-        interactable.ServerThrow(totalThrowForce);
+        NetworkHoldableComponent holdable =
+            playerController.currentHoldItem.GetComponent<NetworkHoldableComponent>();
+        // holdable.GetComponent<NetworkTransformHybrid>().syncDirection = SyncDirection.ServerToClient;
+        holdable.ServerThrow(totalThrowForce);
         playerController.currentHoldItem = null;
 
-        // interactable.netIdentity.RemoveClientAuthority();
+        // holdable.netIdentity.RemoveClientAuthority();
     }
 
     [Command(requiresAuthority = false)]
@@ -274,7 +283,7 @@ public class InteractionManager : NetworkBehaviour {
         NetworkConnectionToClient senderOrHost = sender ?? PlayerController.LocalPlayer.connectionToClient;
         PlayerController playerController = SessionManager.Instance.players[senderOrHost];
 
-        playerController.currentHoldItem.GetComponent<NetworkInteractableComponent>().ServerDrop();
+        playerController.currentHoldItem.GetComponent<NetworkHoldableComponent>().ServerDrop();
         playerController.currentHoldItem = null;
     }
 

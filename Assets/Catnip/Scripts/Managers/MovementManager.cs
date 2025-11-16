@@ -124,11 +124,17 @@ public class MovementManager : MonoBehaviour {
             playerController.firstPersonFollow.gameObject.SetActive(false);
             G.Instance.thirdPersonCamera.gameObject.SetActive(true);
             playerController.thirdPersonFollow.gameObject.SetActive(true);
+            
+            playerController.fpvPlayerMeshes.ForEach(it => it.SetActive(false));
+            playerController.playerMesh.SetActive(true);
         } else if (playerController.personView == PersonView.Third) {
             G.Instance.thirdPersonCamera.gameObject.SetActive(false);
             playerController.thirdPersonFollow.gameObject.SetActive(false);
             G.Instance.firstPersonCamera.gameObject.SetActive(true);
             playerController.firstPersonFollow.gameObject.SetActive(true);
+            
+            playerController.fpvPlayerMeshes.ForEach(it => it.SetActive(true));
+            playerController.playerMesh.SetActive(false);
         }
 
         playerController.personView =

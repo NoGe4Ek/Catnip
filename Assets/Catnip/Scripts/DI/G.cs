@@ -17,7 +17,10 @@ public class G : MonoBehaviour {
     [SerializeField] public InputManager inputManager;
     [SerializeField] public InteractionManager interactionManager;
 
-    [SerializeField] public LayerMask interactableLayer;
+    [SerializeField] public LayerMask defaultLayer;
+    [SerializeField] public LayerMask holdableLayer;
+    [SerializeField] public LayerMask storageLayer;
+    [SerializeField] public LayerMask storageZoneLayer;
     [SerializeField] public TMP_Text moneyBalanceText;
     public static G Instance { get; private set; }
 

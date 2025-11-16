@@ -16,7 +16,7 @@ public class CatnipBashController : NetworkBehaviour {
         CutInternal();
         RpcCut();
         
-        root.FindComponentInParents<PotController>().growState = GrowState.Empty;
+        root.FindComponentInParentRecursive<PotController>().growState = GrowState.Empty;
         for (int i = 0; i < 3; i++) {
             GameObject catnipInstance = Instantiate(catnipPrefab, new Vector3(transform.position.x, 3f, transform.position.z), Quaternion.identity);
             NetworkServer.Spawn(catnipInstance);

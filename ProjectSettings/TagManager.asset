@@ -12,9 +12,9 @@ TagManager:
   - Water
   - UI
   - Ground
-  - Interactable
+  - Holdable
   - Storage
-  - 
+  - StorageZone
   - 
   - 
   - 

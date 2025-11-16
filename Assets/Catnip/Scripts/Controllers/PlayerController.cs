@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Catnip.Scripts.DI;
 using Catnip.Scripts.Managers;
 using Catnip.Scripts.Models;
@@ -21,6 +22,9 @@ public class PlayerController : NetworkBehaviour {
     }
     [SerializeField] public GameObject backpackMesh;
     [SerializeField] public Transform pickUpPoint;
+
+    [SerializeField] public GameObject playerMesh;
+    [SerializeField] public List<GameObject> fpvPlayerMeshes;
     
     public Transform orientation;
     public Transform obj;
@@ -41,7 +45,10 @@ public class PlayerController : NetworkBehaviour {
         base.OnStartLocalPlayer();
         G.Instance.thirdPersonCamera.gameObject.SetActive(false);
         firstPersonFollow.SetActive(true);
+        fpvPlayerMeshes.ForEach(it => it.SetActive(true));
         thirdPersonFollow.SetActive(false);
+        playerMesh.SetActive(false);
+        
         gameObject.SetActive(true);
         G.Instance.movementManager.playerController = this;
         G.Instance.movementManager.gameObject.SetActive(true);

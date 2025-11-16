@@ -16,6 +16,9 @@ GameObject:
   - component: {fileID: 4821675690278198185}
   - component: {fileID: 4130625528318212759}
   - component: {fileID: 6750198210441436826}
+  - component: {fileID: -3631480082742954331}
+  - component: {fileID: 8966966353754049995}
+  - component: {fileID: 4532954434818467337}
   m_Layer: 7
   m_Name: Catnip
   m_TagString: Untagged
@@ -67,10 +70,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2534402779502191517}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -121,7 +124,6 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  isHoldable: 1
   isHold: 0
   holder: {fileID: 0}
 --- !u!114 &4821675690278198185
@@ -190,6 +192,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6afc4e921d214430afe1a500997286ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3631480082742954331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2534402779502191517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfeb430708774a77935dbad8ff7d890f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Catnip.Scripts._Systems.Interaction.Components.FocusableComponent
+--- !u!114 &8966966353754049995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2534402779502191517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d7788cf320468cabb336f8e3752ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Catnip.Scripts._Systems.Mixing.MixingComponent
+  mix:
+    mixBase: 0
+    mixComponents: 
+--- !u!114 &4532954434818467337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2534402779502191517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4365ff1e4a024cac9ab81abc5ceb0746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Catnip.Scripts._Systems.Slots.StorableComponent
+  syncMethod: 0
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  storePreviewPrefab: {fileID: 2534402779502191517, guid: b3e88c5e381e9db4db30933db2418a08, type: 3}
 --- !u!1 &7001520047867940028
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,10 +297,12 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a0b4cb87bb41321468e2d0e13633265f, type: 2}
+  - {fileID: 2100000, guid: f6d102c707a463d408415c0d0e842ff0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -272,6 +320,7 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0

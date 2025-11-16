@@ -1,8 +1,26 @@
-﻿using Mirror;
+﻿using System;
+using Catnip.Scripts.Utils;
+using Mirror;
 using UnityEngine;
+
 namespace Catnip.Scripts._Systems.Slots {
+[Serializable]
+public class SlotPosition {
+    public int width;
+    public int height;
+
+    public SlotPosition(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+}
+
 public class SlotController : NetworkBehaviour {
-    [SyncVar(hook = nameof(OnStoreObjectChange))] public GameObject storeObject;
+    [SerializeField] public SlotPosition slotPosition;
+
+    [SyncVar(hook = nameof(OnStoreObjectChange))]
+    public GameObject storeObject;
+
     private void OnStoreObjectChange(GameObject oldValue, GameObject newValue) {
         if (newValue == null) {
             oldValue.SetActive(true);
@@ -11,7 +29,9 @@ public class SlotController : NetworkBehaviour {
         }
     }
 
-    [SyncVar(hook = nameof(OnStorePreviewObjectChange))] public GameObject storePreviewObject;
+    [SyncVar(hook = nameof(OnStorePreviewObjectChange))]
+    public GameObject storePreviewObject;
+
     private void OnStorePreviewObjectChange(GameObject oldValue, GameObject newValue) {
         if (newValue == null) return;
         // Нельзя объединить с инстанциированием, иначе сервер не сможет заспавнить этот объект внутри родителя с NetworkIdentity.
@@ -19,15 +39,29 @@ public class SlotController : NetworkBehaviour {
         newValue.transform.SetParent(transform);
         newValue.transform.position = transform.position;
     }
-    
+
     [Server]
     public void SetContent(StorableComponent storable) {
+        if (!IsSetContentAvailable(slotPosition, storable.gameObject)) {
+            return;
+        }
+
         storeObject = storable.gameObject;
         storable.transform.position = transform.position;
         storable.gameObject.SetActive(false);
         GameObject storePreview = Instantiate(storable.storePreviewPrefab);
         NetworkServer.Spawn(storePreview);
         storePreviewObject = storePreview;
+    }
+
+    private bool IsSetContentAvailable(SlotPosition currentSlotPosition, GameObject storable) {
+        ISlotsOwner slotsOwner = gameObject.FindComponentInParentRecursive<ISlotsOwner>();
+        if (slotsOwner == null) {
+            Debug.LogError($"Slot {gameObject.name} has no slots owner");
+            return false;
+        }
+
+        return slotsOwner.GetSlotAvailability(currentSlotPosition, storable);
     }
 
     [Server]
@@ -37,6 +71,12 @@ public class SlotController : NetworkBehaviour {
         storeObject.gameObject.SetActive(true);
         storeObject = null;
         storePreviewObject = null;
+    }
+
+    [Server]
+    public void Clear() {
+        NetworkServer.Destroy(storePreviewObject);
+        NetworkServer.Destroy(storeObject);
     }
 }
 }

@@ -24,6 +24,26 @@ public static class Extensions {
         return array[Random.Next(0, array.Length)];
     }
 
+    public static Vector3 GetRenderCenter(this GameObject obj) {
+        Renderer renderer = obj.GetComponent<Renderer>();
+        if (renderer != null) {
+            return renderer.bounds.center;
+        }
+
+        return obj.transform.position;
+    }
+
+    public static Vector3 GetLocalRenderCenter(this GameObject obj) {
+        Renderer renderer = obj.GetComponent<Renderer>();
+        if (renderer != null) {
+            // Преобразуем мировые координаты в локальные
+            return obj.transform.InverseTransformPoint(renderer.bounds.center);
+        }
+
+        return Vector3.zero;
+    }
+
+
     public static bool IsInLayer(this RaycastHit hit, LayerMask layerMask) {
         return layerMask == (layerMask | (1 << hit.collider.gameObject.layer));
     }
@@ -50,7 +70,7 @@ public static class Extensions {
     }
 
     // ПОИСК ПЕРВОГО ОБЪЕКТА ОПРЕДЕЛЕННОГО ТИПА СРЕДИ РОДИТЕЛЕЙ, РЕКУРСИВНО
-    public static T FindComponentInParents<T>(this GameObject gameObject) where T : Component {
+    public static T FindComponentInParentRecursive<T>(this GameObject gameObject) where T : class {
         Transform current = gameObject.transform;
 
         while (current != null) {
@@ -149,10 +169,10 @@ public static class Extensions {
     // }
 
     public static void DrawSphereCastDebug(Ray ray, float sphereCastRadius, float interactionDistance,
-        LayerMask interactableLayer) {
+        LayerMask holdableLayer) {
         // Выполняем SphereCast для дебага
         bool hasHit = Physics.SphereCast(ray, sphereCastRadius, out RaycastHit hit, interactionDistance,
-            interactableLayer);
+            holdableLayer);
 
         // Настройки визуализации
         Color rayColor = hasHit ? Color.green : Color.red;

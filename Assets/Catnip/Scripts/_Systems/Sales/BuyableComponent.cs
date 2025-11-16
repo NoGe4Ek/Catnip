@@ -1,5 +1,5 @@
 ﻿using System;
-using Catnip.Scripts.Components;
+using Catnip.Scripts._Systems.Interaction.Components;
 using Catnip.Scripts.DI;
 using Catnip.Scripts.Managers;
 using Mirror;
@@ -32,12 +32,12 @@ public class BuyableComponent: MonoBehaviour {
         Destroy(tipObject);
     }
     
-    public NetworkInteractableComponent Buy(NetworkConnectionToClient sender) {
+    public NetworkHoldableComponent Buy(NetworkConnectionToClient sender) {
         SessionManager.Instance.players[sender].balance += cost;
         
         GameObject buyableInstance = Instantiate(buyablePrefab, transform.position, transform.rotation);
         NetworkServer.Spawn(buyableInstance);
-        return buyableInstance.GetComponent<NetworkInteractableComponent>();
+        return buyableInstance.GetComponent<NetworkHoldableComponent>();
     }
 }
 }

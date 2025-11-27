@@ -15,12 +15,12 @@ TagManager:
   - Holdable
   - Storage
   - StorageZone
+  - StorageZoneEmptyHands
   - 
   - 
   - 
   - 
-  - 
-  - 
+  - RenderTarget
   - 
   - 
   - 

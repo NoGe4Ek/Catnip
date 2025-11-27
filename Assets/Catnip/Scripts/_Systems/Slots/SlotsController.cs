@@ -13,9 +13,14 @@ public class SlotsController : MonoBehaviour {
     [SerializeField] public float slotStartOffset = -0.04766257f;
     [SerializeField] public float slotCommonOffset = -0.09532513f;
     [SerializeField] public float slotZOffset = 0.01f;
+    [SerializeField] public bool showWithEmptyHands;
+
+    public readonly List<SlotController> slots = new();
 
     private SlotsSettings slotsSettings;
-    private readonly List<SlotController> slots = new();
+
+    public bool CanShow() =>
+        showWithEmptyHands || !showWithEmptyHands && PlayerController.LocalPlayer.currentHoldItem != null;
 
     public bool IsSlotsEmpty() {
         return slots.All(slot => slot.storeObject == null);

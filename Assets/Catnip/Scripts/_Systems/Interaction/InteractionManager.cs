@@ -29,8 +29,10 @@ public class InteractionManager : NetworkBehaviour {
 
     void UpdateFocus() {
         Ray ray = G.Instance.firstPersonCamera.ScreenPointToRay(Extensions.GetMousePosition());
-        if (Physics.SphereCast(ray, 0.01f, out RaycastHit hit, interactionDistance,
-                G.Instance.holdableLayer | G.Instance.storageZoneLayer)) {
+        var layer = G.Instance.holdableLayer | G.Instance.storageZoneLayer | G.Instance.storageLayer;
+
+        if (Physics.SphereCast(ray, 0.01f, out RaycastHit hit, interactionDistance, layer)) {
+            // Обработка фокуса по объекту, доступного к покупке
             if (hit.collider.TryGetComponent(out BuyableComponent buyable)) {
                 if (hit.collider.TryGetComponent(out FocusableComponent focusable)) {
                     buyable.OnFocus();
@@ -39,18 +41,24 @@ public class InteractionManager : NetworkBehaviour {
                     lastBuyable = buyable;
                     lastFocusable = focusable;
                 }
-            } else if (hit.collider.TryGetComponent(out FocusableComponent focusable)) {
+            }
+            // Обработка фокуса по объекту, доступного к выделению Outline
+            else if (hit.collider.TryGetComponent(out FocusableComponent focusable)) {
                 focusable.OnFocus();
                 UpdateUnfocus(focusable: focusable);
                 lastFocusable = focusable;
-            } else if (hit.IsInLayer(G.Instance.storageZoneLayer.value) &&
-                       PlayerController.LocalPlayer.currentHoldItem != null) {
-                SlotsController storage = hit.collider.gameObject
-                    .FindComponentsInChildrenRecursive<SlotsController>(false)
-                    .First();
-                storage.gameObject.SetActive(true);
+            }
+            // Обработка фокуса по объекту, доступного к отображению системы слотов
+            else if (hit.IsInLayer(G.Instance.storageZoneLayer.value | G.Instance.storageLayer)) {
+                SlotsController storage =
+                    hit.collider.gameObject.FindComponentsInChildrenRecursive<SlotsController>(false).First();
+                
                 UpdateUnfocus(storage: storage);
+                if (!storage.CanShow()) return;
+                storage.gameObject.SetActive(true);
                 lastStorage = storage;
+            } else {
+                UpdateUnfocus();
             }
         } else {
             UpdateUnfocus();

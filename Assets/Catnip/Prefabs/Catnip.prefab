@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Catnip.Scripts._Systems.Mixing.MixingComponent
   mix:
-    mixBase: 0
+    mixBase: 1
     mixComponents: 
 --- !u!114 &4532954434818467337
 MonoBehaviour:

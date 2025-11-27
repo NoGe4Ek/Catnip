@@ -5,150 +5,105 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df2f88c0-dbe0-44df-b63c-64fa2fe821f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/LayerMaskExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/LayerMaskExtensions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/Components/FocusableComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/Components/FocusableComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Mixing.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Mixing/Mixing.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Mixing/Mixing.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Mixing/MixingComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Mixing/MixingComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Mixing/MortarController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Mixing/MortarController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/ISlotsOwner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/ISlotsOwner.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Mixing/PestleController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Mixing/PestleController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaBarDOTween.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaBarDOTween.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Catnip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Catnip/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Backpack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Backpack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/BlendStorePreview.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/BlendStorePreview.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Catnip.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Catnip.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Seeds.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Seeds.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Soil.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Soil.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Sphere.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Sphere.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Cat_Mesh.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Cat_Mesh.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Mint_Mat_Both.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Resources/Mint_Mat_Both.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Transparent.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Resources/Transparent.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Tile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Tile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/1 (1).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/1 (1).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Cat_NPC.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Cat_NPC.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Catnip_Bush.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Catnip_Bush.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Catnip_Bush_Outline_Mesh.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Catnip_Bush_Outline_Mesh.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Catnip_Bush_Start.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Catnip_Bush_Start.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Catnip_Leaf.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Catnip_Leaf.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/FPS_Cat_Mesh (1).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/FPS_Cat_Mesh (1).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/FPS_Cat_Mesh.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/FPS_Cat_Mesh.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Flower_Pot.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Flower_Pot.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Landscape.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Landscape.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Landscape_Mesh (1).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Landscape_Mesh (1).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Mint_Mat_Both.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Mint_Mat_Both.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player/Cat_Mesh.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player/Cat_Mesh.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player/TextureTest.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player/TextureTest.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player/blinn3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player/blinn3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player/blinn4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player/blinn4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player/lambert3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player/lambert3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player/lambert4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Player/lambert4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/PostProcessing.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/PostProcessing/PostProcessing.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/PostProcessing/PostProcessing.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/PostProcessing/Soil Profile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/PostProcessing/Soil Profile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Seeds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Seeds/Botle_Of_Semen.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Seeds/Botle_Of_Semen.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Seeds/Botle_Of_Semen_Alpha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Seeds/Botle_Of_Semen_Alpha.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Seeds/Botle_Of_Semen_Color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Seeds/Botle_Of_Semen_Color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Spray.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Spray/Spray.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Spray/Spray.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Spray/Spray_Color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Spray/Spray_Color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Stypka.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Stypka.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Table.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Table.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Tail (1).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Tail (1).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Tile_Grid.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Tile_Grid.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Transparent.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/Transparent.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/back.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/back.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/scissors.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Resources/scissors.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/BasketballCounterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/BasketballCounterController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/SteamLobby.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/SteamLobby.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/DI/G.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/DI/G.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/MovementManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/MovementManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/Extensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Gardening/Controllers/CatnipBashController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Gardening/Controllers/CatnipBashController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Gardening/Controllers/SprayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Gardening/Controllers/SprayController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/Components/NetworkInteractableComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/Components/NetworkHoldableComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/Components/NetworkInteractableComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/Components/NetworkHoldableComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Backpack/BackpackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Backpack/BackpackController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Sales/BuyableComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Sales/BuyableComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Sales/Controllers/CatnipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Sales/Controllers/CatnipController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Mixing/MortarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Mixing/MortarController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Settings/DefaultVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Settings/DefaultVolumeProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Settings/PC_RPAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Settings/PC_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Settings/PC_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Settings/SampleSceneProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveLevels/Materials/CubeSphere.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveLevels/Materials/CubeSphere.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveLevels/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveLevels/Materials/Ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveLevels/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveLevels/Materials/Player.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveLevels/Materials/Portal.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveLevels/Materials/Portal.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveLevels/Materials/StartPoint.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveLevels/Materials/StartPoint.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Capsule.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Capsule.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Cube.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Cube.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Cylinder.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Cylinder.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Player.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Quad.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Quad.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Shelter.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Shelter.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Sphere.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Sphere.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Zone.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AdditiveScenes/Materials/Zone.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/AssignAuthority/Materials/Object.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/AssignAuthority/Materials/Object.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Benchmark/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Benchmark/Materials/Red.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Benchmark/Materials/White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Benchmark/Materials/White.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/BenchmarkIdle/Npc.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/BenchmarkIdle/Npc.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/BenchmarkIdle/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/BenchmarkIdle/Player.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/BenchmarkPrediction/BallMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/BenchmarkPrediction/BallMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/BenchmarkPrediction/WallMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/BenchmarkPrediction/WallMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Ball/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Ball/Red.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Ball/White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Ball/White.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Table/Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Table/Body.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Table/Edge.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Table/Edge.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Table/Felt.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Table/Felt.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Table/Holes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Table/Holes.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Table/Lamp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Table/Lamp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Table/Pockets.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Billiards/Table/Pockets.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/BilliardsPredicted/Ball/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/BilliardsPredicted/Ball/Red.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/BilliardsPredicted/Ball/White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/BilliardsPredicted/Ball/White.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/BilliardsPredicted/Ball/WhitePredicted.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/BilliardsPredicted/Ball/WhitePredicted.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CCU/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CCU/Red.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CCU/White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CCU/White.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialBlack.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialBlack.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialBrown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialBrown.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialDesert.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialDesert.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialFloor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialFloor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialGold.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialGold.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialGreenDark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialGreenDark.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialIcon1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialIcon1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialRed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialRed.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialSilver.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialSilver.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialWhite.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CharacterSelection/Materials/MaterialWhite.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CouchCoop/Materials/MaterialColliders.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CouchCoop/Materials/MaterialColliders.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CouchCoop/Materials/MaterialGround.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CouchCoop/Materials/MaterialGround.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CouchCoop/Materials/MaterialPlatform1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CouchCoop/Materials/MaterialPlatform1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CouchCoop/Materials/MaterialPlatform2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CouchCoop/Materials/MaterialPlatform2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/CouchCoop/Materials/MaterialPlayer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/CouchCoop/Materials/MaterialPlayer.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/HexSpatialHash/Mateirals/RandomColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/HexSpatialHash/Mateirals/RandomColor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Materials/Render/PlayArea.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Materials/Render/PlayArea.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Materials/Render/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Materials/Render/Player.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Materials/Render/Prize.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Materials/Render/Prize.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Models/Icosphere/Materials/Icosphere.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/MultipleAdditiveScenes/Models/Icosphere/Materials/Icosphere.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Settings/Ben Day/ShaderGraph_Composite.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Settings/Ben Day/ShaderGraph_Composite.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Settings/Line Edges/Line Edges Shader Graph.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Settings/Line Edges/Line Edges Shader Graph.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/PickupsDropsChilds/Materials/Ball.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/PickupsDropsChilds/Materials/Ball.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/PickupsDropsChilds/Materials/Bat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/PickupsDropsChilds/Materials/Bat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/PickupsDropsChilds/Materials/Box.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/PickupsDropsChilds/Materials/Box.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/RigidbodyBenchmark/Materials/Floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/RigidbodyBenchmark/Materials/Floor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/RigidbodyBenchmark/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/RigidbodyBenchmark/Materials/Player.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/RigidbodyBenchmark/Materials/Server.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/RigidbodyBenchmark/Materials/Server.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/RigidbodyPhysics/Materials/Floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/RigidbodyPhysics/Materials/Floor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/RigidbodyPhysics/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/RigidbodyPhysics/Materials/Player.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/RigidbodyPhysics/Materials/Server.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/RigidbodyPhysics/Materials/Server.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Room/Materials/PlayArea.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Room/Materials/PlayArea.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Room/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Room/Materials/Player.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/Room/Materials/Prize.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/Room/Materials/Prize.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/StackedPrediction/CubeMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/StackedPrediction/CubeMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/StackedPrediction/GroundMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/StackedPrediction/GroundMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/SyncDirection/White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/SyncDirection/White.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TankTheftAuto/Materials/MaterialPlayer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TankTheftAuto/Materials/MaterialPlayer.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TankTheftAuto/Materials/MaterialTrigger.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TankTheftAuto/Materials/MaterialTrigger.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/DeathSplatter.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/DeathSplatter.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/Enemy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/Enemy.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/EnemyHand1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/EnemyHand1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/EnemyHand2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/EnemyHand2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/Flash.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/Flash.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/Floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/Floor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/HitPoint.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/HitPoint.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/MaterialBlack.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/MaterialBlack.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/MaterialGrey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/MaterialGrey.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/MaterialWalls.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/MaterialWalls.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/MaterialYellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/MaterialYellow.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/Player.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/PlayerLF.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/PlayerLF.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/PlayerRF.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/PlayerRF.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/RespawnPortal.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/TopDownShooter/Materials/RespawnPortal.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/_Common/RobotKyle/Materials/Robot_Color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/_Common/RobotKyle/Materials/Robot_Color.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/_Common/TankModel/(Public Domain) Recon_Tank/TankMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/_Common/TankModel/(Public Domain) Recon_Tank/TankMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mirror/Examples/_Common/Textures/(Public Domain) Dirt Hand Painted Texture/Dirt.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mirror/Examples/_Common/Textures/(Public Domain) Dirt Hand Painted Texture/Dirt.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Export/Backpack/Background.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Export/Backpack/Background.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Export/Backpack/Tile00.mesh" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Export/Backpack/Tile00.mesh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,16 +129,22 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2579e7234cb64ac89d53050629ee5bbe2ae00/cf/de225206/Physics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5e928c233394743becb21aa0895520810fc00/67/961f79bb/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e0e8e800bf46f2b662dadce241ea061f7600/5c/b75adc28/MissingComponentException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e0e8e800bf46f2b662dadce241ea061f7600/5f/987a399f/Object.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e0e8e800bf46f2b662dadce241ea061f7600/d8/d7c85c8d/Time.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e0e8e800bf46f2b662dadce241ea061f7600/fc/d813e51f/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2f565d214ab4e3d9e060571ada8f3d91df800/5b/2d92d738/CameraType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2f565d214ab4e3d9e060571ada8f3d91df800/64/61812ece/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2f565d214ab4e3d9e060571ada8f3d91df800/6c/6706f874/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2f565d214ab4e3d9e060571ada8f3d91df800/f6/d0ff6f09/Time.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Resources/Materials/Test 1.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Resources/Materials/Test 2.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Resources/Materials/Test 3.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Resources/Materials/Test.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Resources/Text/BuyableColorEffect.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/BasketballCounterController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -222,11 +183,18 @@
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/ISlotsOwner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/StorableComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaBarDOTween.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Mirror/Transports/FizzySteamworks/FizzySteamworks.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Samples/Unity Toon Shader/0.12.0-preview/Universal render pipeline/.sample.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/com.rlabrecque.steamworks.net/Runtime/autogen/isteamnetworkingutils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@b66fdb7cd1f2/Runtime/Components/CinemachinePanTilt.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@be6c4fd0abf5/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@be6c4fd0abf5/InputSystem/Actions/InputActionAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@33016d94899e/Editor/Drawing/PreviewManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/UGUI/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/UGUI/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Pepperon4/Assets/Pepperon/Scripts/Managers/SpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../PhiJam_02/Assets/PhiJam_02/Scripts/Controllers/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../PhiJam_02/Assets/PhiJam_02/Scripts/Managers/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -312,10 +280,10 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="33156">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7684">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="33156" />
+      <option name="pid" value="7684" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -391,7 +359,15 @@
       <workItem from="1763050253075" duration="3527000" />
       <workItem from="1763148972697" duration="8797000" />
       <workItem from="1763199960997" duration="10002000" />
-      <workItem from="1763297319968" duration="11794000" />
+      <workItem from="1763297319968" duration="11939000" />
+      <workItem from="1763399990213" duration="14800000" />
+      <workItem from="1763504959963" duration="41000" />
+      <workItem from="1763591798863" duration="652000" />
+      <workItem from="1763831971773" duration="3303000" />
+      <workItem from="1763837130462" duration="1397000" />
+      <workItem from="1763904460999" duration="11206000" />
+      <workItem from="1764019335892" duration="6280000" />
+      <workItem from="1764275947626" duration="6473000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлен Buyable компонент с плавающим текстом-ценником и context-подсказкой">
       <option name="closed" value="true" />
@@ -401,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762800004998</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавлены Адаптивные настройки слотов&#10;Добавлен fpv">
+      <option name="closed" value="true" />
+      <created>1763310903781</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1763310903781</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +402,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Добавлен Buyable компонент с плавающим текстом-ценником и context-подсказкой" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен Buyable компонент с плавающим текстом-ценником и context-подсказкой" />
+    <MESSAGE value="Добавлены Адаптивные настройки слотов&#10;Добавлен fpv" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены Адаптивные настройки слотов&#10;Добавлен fpv" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -463,19 +448,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/SteamLobby.cs</url>
-          <line>151</line>
-          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\Controllers\SteamLobby.cs" containingFunctionPresentation="Method 'Start'">
-            <startOffsets>
-              <option value="5004" />
-            </startOffsets>
-            <endOffsets>
-              <option value="5067" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/SteamLobby.cs</url>
           <line>159</line>
           <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\Controllers\SteamLobby.cs" containingFunctionPresentation="Method 'HostLobby'">
             <startOffsets>
@@ -486,19 +458,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotsController.cs</url>
-          <line>37</line>
-          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Slots\SlotsController.cs" containingFunctionPresentation="Method 'Start'">
-            <startOffsets>
-              <option value="1254" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1354" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotController.cs</url>
@@ -515,94 +474,55 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs</url>
-          <line>221</line>
+          <line>229</line>
           <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Interaction\InteractionManager.cs" containingFunctionPresentation="Method 'CmdStoreItem'">
             <startOffsets>
-              <option value="9737" />
+              <option value="10067" />
             </startOffsets>
             <endOffsets>
-              <option value="9782" />
+              <option value="10112" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs</url>
-          <line>111</line>
-          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Interaction\InteractionManager.cs" containingFunctionPresentation="Method 'InteractPrimary'">
+          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Mixing/MortarController.cs</url>
+          <line>29</line>
+          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Mixing\MortarController.cs" containingFunctionPresentation="Method 'Mix'">
             <startOffsets>
-              <option value="5042" />
+              <option value="971" />
             </startOffsets>
             <endOffsets>
-              <option value="5133" />
+              <option value="1339" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="20" />
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs</url>
-          <line>112</line>
-          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Interaction\InteractionManager.cs" containingFunctionPresentation="Method 'InteractPrimary'">
+          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaManager.cs</url>
+          <line>46</line>
+          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Stamina\StaminaManager.cs" containingFunctionPresentation="Method 'EndSprint'">
             <startOffsets>
-              <option value="5152" />
+              <option value="1452" />
             </startOffsets>
             <endOffsets>
-              <option value="5221" />
+              <option value="1470" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs</url>
-          <line>113</line>
-          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Interaction\InteractionManager.cs" containingFunctionPresentation="Method 'InteractPrimary'">
+          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaManager.cs</url>
+          <line>68</line>
+          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Stamina\StaminaManager.cs" containingFunctionPresentation="Method 'Update'">
             <startOffsets>
-              <option value="5246" />
+              <option value="2237" />
             </startOffsets>
             <endOffsets>
-              <option value="5294" />
+              <option value="2335" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs</url>
-          <line>100</line>
-          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Interaction\InteractionManager.cs" containingFunctionPresentation="Method 'InteractPrimary'">
-            <startOffsets>
-              <option value="4431" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4588" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs</url>
-          <line>102</line>
-          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Interaction\InteractionManager.cs" containingFunctionPresentation="Method 'InteractPrimary'">
-            <startOffsets>
-              <option value="4615" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4663" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs</url>
-          <line>77</line>
-          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Interaction\InteractionManager.cs" containingFunctionPresentation="Method 'UpdateUnfocus'">
-            <startOffsets>
-              <option value="3207" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3231" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="26" />
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

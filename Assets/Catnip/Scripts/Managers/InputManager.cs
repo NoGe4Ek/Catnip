@@ -1,4 +1,5 @@
-﻿using Catnip.Scripts.DI;
+﻿using Catnip.Scripts._Systems.Stamina;
+using Catnip.Scripts.DI;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,6 +9,7 @@ public class InputManager : MonoBehaviour {
     public InputAction moveAction,
         lookAction,
         jumpAction,
+        sprintAction,
         interactPrimaryAction,
         interactSecondaryAction,
         interactTertiaryAction;
@@ -20,16 +22,27 @@ public class InputManager : MonoBehaviour {
         moveAction.performed += ctx => moveVector = ctx.ReadValue<Vector2>();
         moveAction.canceled += _ => moveVector = Vector2.zero;
 
-        jumpAction = InputSystem.actions.FindAction("Sprint");
-        jumpAction.performed += _ => G.Instance.movementManager.SetRunning(true);
-        moveAction.canceled += _ => G.Instance.movementManager.SetRunning(false);
+        sprintAction = InputSystem.actions.FindAction("Sprint");
+        sprintAction.performed += _ => {
+            Debug.Log("Sprint pressed");
+            G.Instance.movementManager.SetRunning(true);
+            StaminaManager.Instance.StartSprint();
+        };
+        sprintAction.canceled += _ => {
+            Debug.Log("Sprint released");
+            G.Instance.movementManager.SetRunning(false);
+            StaminaManager.Instance.EndSprint();
+        };
 
         lookAction = InputSystem.actions.FindAction("Look");
         lookAction.performed += ctx => lookVector = ctx.ReadValue<Vector2>();
         lookAction.canceled += _ => lookVector = Vector2.zero;
 
         jumpAction = InputSystem.actions.FindAction("Jump");
-        jumpAction.performed += _ => G.Instance.movementManager.Jump();
+        jumpAction.performed += _ => {
+            G.Instance.movementManager.Jump();
+            StaminaManager.Instance.StartJump();
+        };
 
         jumpAction = InputSystem.actions.FindAction("PersonView");
         jumpAction.performed += _ => G.Instance.movementManager.NextPersonView();

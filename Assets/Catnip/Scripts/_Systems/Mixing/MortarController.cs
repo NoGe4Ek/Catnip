@@ -9,22 +9,24 @@ namespace Catnip.Scripts._Systems.Mixing {
 public class MortarController : MonoBehaviour, ISlotsOwner {
     [SerializeField] public GameObject blendPrefab;
     [SerializeField] public SlotsSettings slotsSettings;
-    private List<SlotController> slots;
+    private SlotsController slotsController;
 
     public void Awake() {
-        slots = gameObject.FindComponentsInChildrenRecursive<SlotController>();
+        slotsController = gameObject.FindComponentsInChildrenRecursive<SlotsController>(false).First();
     }
 
     public void Mix() {
-        var slotWithComponentList = slots.Select(slot =>
+        var slotWithComponentList = slotsController.slots.Select(slot =>
             (
                 Slot: slot,
-                Component: slot.GetComponentInChildren<MixingComponent>()
+                Component: slot.storeObject.GetComponentInChildren<MixingComponent>()
             )
         ).ToList();
 
+        if (slotWithComponentList.Count < 2) return;
+        
         var first = slotWithComponentList[0];
-        var second = slotWithComponentList[0];
+        var second = slotWithComponentList[1];
         Mixing.Mix newMix = new Mixing.Mix {
             mixBase = first.Component.mix.mixBase != Mixing.MixBase.Empty
                 ? first.Component.mix.mixBase

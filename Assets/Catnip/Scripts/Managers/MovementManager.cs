@@ -85,6 +85,11 @@ public class MovementManager : MonoBehaviour {
     }
 
     public void SetRunning(bool running) {
+        if (running) {
+            playerController.movementSpeed = 6f;
+        } else {
+            playerController.movementSpeed = 3f;
+        }
         isRunning = running;
     }
 

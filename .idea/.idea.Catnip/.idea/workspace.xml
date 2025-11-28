@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2f88c0-dbe0-44df-b63c-64fa2fe821f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/DebuffItemUi.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/DebuffItemUi.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Catnip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Catnip/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Debuff_Mask.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Debuff_Mask.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Export/Stamina_HUD/Stamina_HUD_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Export/Stamina_HUD/Stamina_HUD_Scene.unity" afterDir="false" />
-    </list>
+    <list default="true" id="df2f88c0-dbe0-44df-b63c-64fa2fe821f6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +41,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2f565d214ab4e3d9e060571ada8f3d91df800/6c/6706f874/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2f565d214ab4e3d9e060571ada8f3d91df800/f6/d0ff6f09/Time.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Prefabs/Debuff_Grp.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/aphirri/Projects/Unity/Catnip/Assets/Catnip/Prefabs/Debuff_Mask.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Prefabs/Debuff_Mask.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Resources/Materials/Test 1.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Resources/Materials/Test 2.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Resources/Materials/Test 3.shader" root0="FORCE_HIGHLIGHTING" />
@@ -278,7 +273,7 @@
       <workItem from="1763904460999" duration="11206000" />
       <workItem from="1764019335892" duration="6280000" />
       <workItem from="1764275947626" duration="7436000" />
-      <workItem from="1764354959585" duration="6295000" />
+      <workItem from="1764354959585" duration="6699000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлен Buyable компонент с плавающим текстом-ценником и context-подсказкой">
       <option name="closed" value="true" />
@@ -304,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764284300296</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Добавлены иконки к дебаффам стамины">
+      <option name="closed" value="true" />
+      <created>1764361475482</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764361475482</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +326,8 @@
     <MESSAGE value="Добавлен Buyable компонент с плавающим текстом-ценником и context-подсказкой" />
     <MESSAGE value="Добавлены Адаптивные настройки слотов&#10;Добавлен fpv" />
     <MESSAGE value="Добавлена стамина" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена стамина" />
+    <MESSAGE value="Добавлены иконки к дебаффам стамины" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены иконки к дебаффам стамины" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -430,19 +434,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/DebuffItemUi.cs</url>
-          <line>22</line>
-          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Stamina\DebuffItemUi.cs" containingFunctionPresentation="Method 'FixedUpdate'">
-            <startOffsets>
-              <option value="642" />
-            </startOffsets>
-            <endOffsets>
-              <option value="664" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

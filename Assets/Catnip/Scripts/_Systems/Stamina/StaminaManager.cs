@@ -21,14 +21,15 @@ public class StaminaManager : MonoBehaviour {
 
     public void AddDebuff(DebuffType type) {
         GameObject debuffItem = Instantiate(debuffItemPrefab, debuffParent);
-        PlayerController.LocalPlayer.staminaState.AddDebuff(type, debuffItem);
+        DebuffItemUi debuffItemUi = debuffItem.GetComponent<DebuffItemUi>();
+        PlayerController.LocalPlayer.staminaState.AddDebuff(type, debuffItemUi);
 
         new Task(StartDebuffTask(type));
     }
 
     private IEnumerator StartDebuffTask(DebuffType type) {
         while (PlayerController.LocalPlayer.staminaState.GetCurrentMaxValueWithDebuff() > 0) {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.5f);
             PlayerController.LocalPlayer.staminaState.UpdateDebuff(type, 1);
         }
     }
@@ -61,26 +62,31 @@ public class StaminaManager : MonoBehaviour {
             PlayerController.LocalPlayer.staminaState = new(100, 100, new List<int>());
             AddDebuff(DebuffType.SomeDebuff);
             AddDebuff(DebuffType.SomeDebuff1);
+            AddDebuff(DebuffType.SomeDebuff2);
         });
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         if (PlayerController.LocalPlayer == null) return;
-        staminaSliderImage.fillAmount = PlayerController.LocalPlayer.staminaState.GetCurrentValueCoerce();
-
         // Stamina width
         RectTransform rt = staminaItem.transform as RectTransform;
         if (rt == null) return;
         float newWidth = StaminaState.MaxStaminaWidth - PlayerController.LocalPlayer.staminaState.GetDebuffsWidth();
         rt.sizeDelta = new Vector2(newWidth, rt.sizeDelta.y);
-
+        
         // Debuffs width
         foreach (var staminaStateDebuffValue in PlayerController.LocalPlayer.staminaState.GetDebuffsIterator()) {
             var value = staminaStateDebuffValue.Value.Item1;
             float newWidthForDebuff = value * StaminaState.ValueToWidthCoeff;
-            var transform = staminaStateDebuffValue.Value.Item2.transform as RectTransform;
+            
+            var transform = staminaStateDebuffValue.Value.Item2.rect;
             transform.sizeDelta = new Vector2(newWidthForDebuff, transform.sizeDelta.y);
         }
+    }
+
+    private void Update() {
+        if (PlayerController.LocalPlayer == null) return;
+        staminaSliderImage.fillAmount = PlayerController.LocalPlayer.staminaState.GetCurrentValueCoerce();
 
         // Rest logic
         if (Time.time - lastActivityTime >= 3 && restTask is not { Running: true }) {

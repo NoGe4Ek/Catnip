@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using EasyTextEffects.Editor.MyBoxCopy.Extensions;
 using UnityEngine;
 
 namespace Catnip.Scripts._Systems.Stamina {
@@ -13,7 +14,7 @@ public class StaminaState {
 
     private int maxValue; // 100
     private int currentValue; // 70
-    private readonly Dictionary<DebuffType, Tuple<int, GameObject>> debuffValues = new(); // 20, 10
+    private readonly Dictionary<DebuffType, Tuple<int, DebuffItemUi>> debuffValues = new(); // 20, 10
 
     public int GetCurrentValue() {
         return currentValue;
@@ -23,13 +24,13 @@ public class StaminaState {
         currentValue = Mathf.Clamp(0, currentValue + diff, GetCurrentMaxValueWithDebuff());
     }
 
-    public IEnumerable<KeyValuePair<DebuffType, Tuple<int, GameObject>>> GetDebuffsIterator() {
+    public IEnumerable<KeyValuePair<DebuffType, Tuple<int, DebuffItemUi>>> GetDebuffsIterator() {
         return debuffValues.AsEnumerable();
     }
 
-    public void AddDebuff(DebuffType debuffType, GameObject debuffItem) {
+    public void AddDebuff(DebuffType debuffType, DebuffItemUi debuffItemUi) {
         // var previousMaxValue = GetCurrentMaxValueWithDebuff();
-        debuffValues.Add(debuffType, new Tuple<int, GameObject>(1, debuffItem));
+        debuffValues.Add(debuffType, new Tuple<int, DebuffItemUi>(1, debuffItemUi));
         // var newMaxValue = GetCurrentMaxValueWithDebuff();
         // UpdateCurrentValueFairly(previousMaxValue, newMaxValue, 1);
     }
@@ -37,8 +38,16 @@ public class StaminaState {
     public void UpdateDebuff(DebuffType debuffType, int diff) {
         // var previousMaxValue = GetCurrentMaxValueWithDebuff();
         var oldValue = debuffValues[debuffType];
-        debuffValues[debuffType] = new Tuple<int, GameObject>(oldValue.Item1 + diff, oldValue.Item2);
+        debuffValues[debuffType] = new Tuple<int, DebuffItemUi>(oldValue.Item1 + diff, oldValue.Item2);
         currentValue = Mathf.Min(currentValue, GetCurrentMaxValueWithDebuff());
+
+        // var newValue = debuffValues[debuffType];
+        // debuffValues.IndexOfItem<Tuple<int, DebuffItemUi>>(newValue);
+        // debuffValues.Val
+        //
+        // float iconX = MaxStaminaWidth - (GetDebuffsWidth() - newValue.Item1 * ValueToWidthCoeff / 2);
+        // newValue.Item2.UpdateIconPosition(iconX);
+        
         // var newMaxValue = GetCurrentMaxValueWithDebuff();
         // UpdateCurrentValueFairly(previousMaxValue, newMaxValue, diff);
     }
@@ -87,5 +96,6 @@ public class StaminaState {
 public enum DebuffType {
     SomeDebuff,
     SomeDebuff1,
+    SomeDebuff2,
 }
 }

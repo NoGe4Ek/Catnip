@@ -14,7 +14,7 @@ public class FloatingText: MonoBehaviour {
     }
     
     private void Update() {
-        transform.rotation = Quaternion.LookRotation(transform.position - G.Instance.firstPersonCamera.transform.position);
+        transform.rotation = Quaternion.LookRotation(transform.position - G.Instance.mainCamera.transform.position);
         transform.position = target.position + offset;
     }
 }

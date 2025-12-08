@@ -11,13 +11,13 @@ public class G : MonoBehaviour {
     [SerializeField] public Transform tipsContainer;
     [SerializeField] public GameObject tipPrefab;
     [SerializeField] public Canvas firstPersonCameraCanvas;
-    [SerializeField] public Camera firstPersonCamera;
-    [SerializeField] public Camera thirdPersonCamera;
+    [SerializeField] public Camera mainCamera;
     [SerializeField] public MovementManager movementManager;
     [SerializeField] public InputManager inputManager;
     [SerializeField] public InteractionManager interactionManager;
 
     [SerializeField] public LayerMask defaultLayer;
+    [SerializeField] public LayerMask groundLayer;
     [SerializeField] public LayerMask holdableLayer;
     [SerializeField] public LayerMask storageLayer;
     [SerializeField] public LayerMask storageZoneLayer;

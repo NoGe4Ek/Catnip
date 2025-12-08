@@ -60,9 +60,9 @@ public class StaminaManager : MonoBehaviour {
     private void Start() {
         EventManager.AddListener<PlayerController>(EventKey.LocalPlayerReady, controller => {
             PlayerController.LocalPlayer.staminaState = new(100, 100, new List<int>());
-            AddDebuff(DebuffType.SomeDebuff);
-            AddDebuff(DebuffType.SomeDebuff1);
-            AddDebuff(DebuffType.SomeDebuff2);
+            // AddDebuff(DebuffType.SomeDebuff);
+            // AddDebuff(DebuffType.SomeDebuff1);
+            // AddDebuff(DebuffType.SomeDebuff2);
         });
     }
 
@@ -92,12 +92,19 @@ public class StaminaManager : MonoBehaviour {
         if (Time.time - lastActivityTime >= 3 && restTask is not { Running: true }) {
             restTask = new Task(StartRestTask());
         }
+        
+        // Ragdoll logic
+        if (PlayerController.LocalPlayer.staminaState.GetCurrentValue() <= 0) {
+            RagdollManager.Instance.TryKnockout();
+        } else {
+            RagdollManager.Instance.TryKnockin();
+        }
     }
 
     private IEnumerator StartRestTask() {
         while (PlayerController.LocalPlayer.staminaState.GetCurrentValue() <
                PlayerController.LocalPlayer.staminaState.GetCurrentMaxValueWithDebuff()) {
-            yield return new WaitForSeconds(0.6f);
+            yield return new WaitForSeconds(0.2f);
             PlayerController.LocalPlayer.staminaState.UpdateCurrentValue(+1);
             lastActivityTime = Time.time;
         }

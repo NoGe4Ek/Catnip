@@ -11,6 +11,8 @@ public class SlotsSettings {
         this.width = width;
         this.height = height;
     }
+
+    public SlotsSettings() { }
 }
 
 public interface ISlotsOwner {

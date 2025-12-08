@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2f88c0-dbe0-44df-b63c-64fa2fe821f6" name="Changes" comment="" />
+    <list default="true" id="df2f88c0-dbe0-44df-b63c-64fa2fe821f6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/IdentityInternal.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/IdentityInternal.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/RagdollManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/RagdollManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Catnip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Catnip/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Backgound.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Backgound.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Backpack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Backpack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/CatnipStorePreview.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/CatnipStorePreview.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Customer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Customer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Prefabs/SprayStorePreview.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Prefabs/SprayStorePreview.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/DI/G.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/DI/G.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/MovementManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/MovementManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/FloatingText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/FloatingText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/LookAtPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/Utils/LookAtPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/Components/NetworkHoldableComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/Components/NetworkHoldableComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/ISlotsOwner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/ISlotsOwner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,20 +54,13 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2579e7234cb64ac89d53050629ee5bbe2ae00/cf/de225206/Physics.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5e928c233394743becb21aa0895520810fc00/67/961f79bb/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e0e8e800bf46f2b662dadce241ea061f7600/5c/b75adc28/MissingComponentException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d83cdd192a0546d1aaabaadb8fe84f5c29c00/83/4bbed0c3/Rigidbody.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e0e8e800bf46f2b662dadce241ea061f7600/33/2a30f74a/Transform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e0e8e800bf46f2b662dadce241ea061f7600/5f/987a399f/Object.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e0e8e800bf46f2b662dadce241ea061f7600/b9/1524c8db/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e0e8e800bf46f2b662dadce241ea061f7600/d8/d7c85c8d/Time.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e0e8e800bf46f2b662dadce241ea061f7600/fc/d813e51f/Component.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2f565d214ab4e3d9e060571ada8f3d91df800/5b/2d92d738/CameraType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2f565d214ab4e3d9e060571ada8f3d91df800/64/61812ece/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2f565d214ab4e3d9e060571ada8f3d91df800/6c/6706f874/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2f565d214ab4e3d9e060571ada8f3d91df800/f6/d0ff6f09/Time.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e0e8e800bf46f2b662dadce241ea061f7600/d8/0470bf97/Behaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Prefabs/Debuff_Grp.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/aphirri/Projects/Unity/Catnip/Assets/Catnip/Prefabs/Debuff_Mask.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Prefabs/Debuff_Mask.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Resources/Materials/Test 1.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Resources/Materials/Test 2.shader" root0="FORCE_HIGHLIGHTING" />
@@ -84,9 +102,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Sales/Controllers/CustomerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Sales/ISellable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/ISlotsOwner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/IdentityInternal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/StorableComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/DebuffItemUi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/RagdollManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaBarDOTween.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -94,7 +114,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Samples/Unity Toon Shader/0.12.0-preview/Universal render pipeline/.sample.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/com.rlabrecque.steamworks.net/Runtime/autogen/isteamnetworkingutils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.qiaozhilei.easy-text-effects@0e500390d9e1/Editor/MyBoxCopy/Extensions/MyCollections.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@b66fdb7cd1f2/Runtime/Behaviours/CinemachineBrain.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@b66fdb7cd1f2/Runtime/Components/CinemachinePanTilt.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@b66fdb7cd1f2/Runtime/Core/CinemachineVirtualCameraBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@b66fdb7cd1f2/Runtime/Core/PrioritySettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@be6c4fd0abf5/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@be6c4fd0abf5/InputSystem/Actions/InputActionAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@33016d94899e/Editor/Drawing/PreviewManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -116,24 +139,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "XThreadsFramesViewSplitterKey": "0.24568966",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.24568966&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/Windows\Catnip.exe" />
@@ -185,10 +208,10 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3860">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="32972">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="3860" />
+      <option name="pid" value="32972" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -273,7 +296,13 @@
       <workItem from="1763904460999" duration="11206000" />
       <workItem from="1764019335892" duration="6280000" />
       <workItem from="1764275947626" duration="7436000" />
-      <workItem from="1764354959585" duration="6699000" />
+      <workItem from="1764354959585" duration="9019000" />
+      <workItem from="1764367417788" duration="1639000" />
+      <workItem from="1765032400682" duration="4572000" />
+      <workItem from="1765108374290" duration="4143000" />
+      <workItem from="1765127526725" duration="1707000" />
+      <workItem from="1765139431563" duration="13912000" />
+      <workItem from="1765192010226" duration="29649000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлен Buyable компонент с плавающим текстом-ценником и context-подсказкой">
       <option name="closed" value="true" />
@@ -307,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764361475482</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix workspace">
+      <option name="closed" value="true" />
+      <created>1764361982189</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764361982189</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +364,8 @@
     <MESSAGE value="Добавлены Адаптивные настройки слотов&#10;Добавлен fpv" />
     <MESSAGE value="Добавлена стамина" />
     <MESSAGE value="Добавлены иконки к дебаффам стамины" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены иконки к дебаффам стамины" />
+    <MESSAGE value="fix workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix workspace" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -352,7 +390,7 @@
               <option value="429" />
             </startOffsets>
             <endOffsets>
-              <option value="544" />
+              <option value="537" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
@@ -385,26 +423,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Slots/SlotController.cs</url>
-          <line>44</line>
+          <line>65</line>
           <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Slots\SlotController.cs" containingFunctionPresentation="Method 'SetContent'">
             <startOffsets>
-              <option value="1359" />
+              <option value="2321" />
             </startOffsets>
             <endOffsets>
-              <option value="1421" />
+              <option value="2383" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Interaction/InteractionManager.cs</url>
-          <line>229</line>
+          <line>227</line>
           <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Interaction\InteractionManager.cs" containingFunctionPresentation="Method 'CmdStoreItem'">
             <startOffsets>
-              <option value="10067" />
+              <option value="9988" />
             </startOffsets>
             <endOffsets>
-              <option value="10112" />
+              <option value="10033" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
@@ -423,20 +461,38 @@
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/_Systems/Stamina/StaminaManager.cs</url>
-          <line>47</line>
-          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\_Systems\Stamina\StaminaManager.cs" containingFunctionPresentation="Method 'EndSprint'">
+          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/Managers/MovementManager.cs</url>
+          <line>122</line>
+          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\Managers\MovementManager.cs" containingFunctionPresentation="Method 'Jump'">
             <startOffsets>
-              <option value="1531" />
+              <option value="5203" />
             </startOffsets>
             <endOffsets>
-              <option value="1549" />
+              <option value="5249" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="39" />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Catnip/Scripts/Controllers/PlayerController.cs</url>
+          <line>63</line>
+          <properties documentPath="C:\Users\aphirri\Projects\Unity\Catnip\Assets\Catnip\Scripts\Controllers\PlayerController.cs" containingFunctionPresentation="Method 'Knockin'">
+            <startOffsets>
+              <option value="1768" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1916" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
+        <watch expression="this.gameObject" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

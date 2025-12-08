@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Catnip.Scripts.Controllers;
 using Catnip.Scripts.DI;
+using Catnip.Scripts.Managers;
 using Catnip.Scripts.Utils;
+using Mirror;
 using UnityEngine;
 
 namespace Catnip.Scripts._Systems.Slots {
-public class SlotsController : MonoBehaviour {
+public class SlotsController : NetworkBehaviour {
     [SerializeField] public GameObject backgroundPrefab;
     [SerializeField] public GameObject slotPrefab;
     [SerializeField] public float slotStartOffset = -0.04766257f;
@@ -15,9 +17,25 @@ public class SlotsController : MonoBehaviour {
     [SerializeField] public float slotZOffset = 0.01f;
     [SerializeField] public bool showWithEmptyHands;
 
+    [SyncVar(hook = nameof(OnBackgroundObjectChange))]
+    public GameObject backgroundObject;
+
+    private void OnBackgroundObjectChange(GameObject oldValue, GameObject newValue) {
+        if (newValue == null) return;
+        // Нельзя объединить с инстанциированием, иначе сервер не сможет заспавнить этот объект внутри родителя с NetworkIdentity.
+        // А вот изменить ему родителя и позицию после спавна уже можно
+        newValue.transform.SetParent(transform);
+        newValue.transform.localPosition = Vector3.zero;
+        newValue.transform.localRotation = Quaternion.identity;
+        newValue.layer = G.Instance.storageZoneLayer.ToLayer();
+        newValue.transform.localScale = new Vector3(slotsSettings.width, slotsSettings.height, 1);
+        Vector3 renderCenter = newValue.GetLocalRenderCenter();
+        newValue.transform.localPosition = new Vector3(-renderCenter.x * slotsSettings.width, 0, 0);
+    }
+
     public readonly List<SlotController> slots = new();
 
-    private SlotsSettings slotsSettings;
+    [SyncVar] public SlotsSettings slotsSettings;
 
     public bool CanShow() =>
         showWithEmptyHands || !showWithEmptyHands && PlayerController.LocalPlayer.currentHoldItem != null;
@@ -33,33 +51,27 @@ public class SlotsController : MonoBehaviour {
         ISlotsOwner slotsOwner = gameObject.FindComponentInParentRecursive<ISlotsOwner>();
         if (slotsOwner == null) throw new MissingComponentException();
         slotsSettings = slotsOwner.GetSlotsSettings();
-
-
-        gameObject.SetActive(false);
     }
 
-    public void Start() {
-        GameObject backgroundInstance = Instantiate(backgroundPrefab, transform);
-        backgroundInstance.transform.localScale = new Vector3(slotsSettings.width, slotsSettings.height, 1);
-        Vector3 renderCenter = backgroundInstance.GetLocalRenderCenter();
-        backgroundInstance.transform.localPosition = new Vector3(-renderCenter.x * slotsSettings.width, 0, 0);
+    private void Start() {
+        if (isHost || isServer) {
+            GameObject backgroundInstance = Instantiate(backgroundPrefab, transform);
+            NetworkServer.Spawn(backgroundInstance);
+            backgroundObject = backgroundInstance;
 
-        for (int w = 0; w < slotsSettings.width; w++) {
-            for (int h = 0; h < slotsSettings.height; h++) {
-                GameObject slotInstance = Instantiate(slotPrefab, transform);
-                slotInstance.layer = G.Instance.storageLayer.ToLayer();
-                slotInstance.transform.localPosition =
-                    new Vector3(
-                        slotStartOffset + w * slotCommonOffset + (-renderCenter.x * slotsSettings.width),
-                        -slotStartOffset + h * -slotCommonOffset,
-                        slotZOffset
-                    );
+            for (int w = 0; w < slotsSettings.width; w++) {
+                for (int h = 0; h < slotsSettings.height; h++) {
+                    GameObject slotInstance = Instantiate(slotPrefab, transform);
+                    NetworkServer.Spawn(slotInstance);
 
-                SlotController slotController = slotInstance.GetComponent<SlotController>();
-                slotController.slotPosition = new SlotPosition(w, h);
-                slots.Add(slotController);
+                    SlotController slotController = slotInstance.GetComponent<SlotController>();
+                    slotController.slotsController = this;
+                    slotController.slotPosition = new SlotPosition(w, h);
+                    slots.Add(slotController);
+                }
             }
         }
+        gameObject.SetActive(false);
     }
 
     private void Update() {

@@ -71,7 +71,7 @@ public class InputManager : MonoBehaviour {
         interactTertiaryAction = InputSystem.actions.FindAction("Pause");
         interactTertiaryAction.started += _ => {
             isPause = !isPause;
-            G.Instance.firstPersonCamera.GetComponent<CinemachineBrain>().enabled = !isPause;
+            G.Instance.mainCamera.GetComponent<CinemachineBrain>().enabled = !isPause;
         };
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -80,8 +80,11 @@ public class InputManager : MonoBehaviour {
 
     public void Update() {
         if (G.Instance.movementManager.playerController == null) return;
-        if (!isPause) G.Instance.movementManager.Move(moveVector);
-        if (!isPause) G.Instance.movementManager.Rotate(lookVector);
+        if (isPause) return;
+        if (RagdollManager.Instance.isKnockout) return;
+
+        G.Instance.movementManager.Move(moveVector);
+        G.Instance.movementManager.Rotate(lookVector);
     }
 }
 }

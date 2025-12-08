@@ -28,7 +28,7 @@ public class InteractionManager : NetworkBehaviour {
     BuyableComponent lastBuyable;
 
     void UpdateFocus() {
-        Ray ray = G.Instance.firstPersonCamera.ScreenPointToRay(Extensions.GetMousePosition());
+        Ray ray = G.Instance.mainCamera.ScreenPointToRay(Extensions.GetMousePosition());
         var layer = G.Instance.holdableLayer | G.Instance.storageZoneLayer | G.Instance.storageLayer;
 
         if (Physics.SphereCast(ray, 0.01f, out RaycastHit hit, interactionDistance, layer)) {
@@ -90,7 +90,7 @@ public class InteractionManager : NetworkBehaviour {
 
 
     public void InteractPrimary() {
-        Ray ray = G.Instance.firstPersonCamera.ScreenPointToRay(Extensions.GetMousePosition());
+        Ray ray = G.Instance.mainCamera.ScreenPointToRay(Extensions.GetMousePosition());
         if (PlayerController.LocalPlayer.currentHoldItem == null) {
             // Реализация на SphereCast
             // Extensions.DrawSphereCastDebug(ray, sphereCastRadius, interactionDistance, holdableLayer);
@@ -101,13 +101,11 @@ public class InteractionManager : NetworkBehaviour {
             // }
 
 
-            if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance,
-                    G.Instance.holdableLayer | G.Instance.storageLayer)) {
+            if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, G.Instance.holdableLayer | G.Instance.storageLayer)) {
                 if (hit.collider.TryGetComponent(out NetworkHoldableComponent holdable)) {
                     CmdTryPickup(holdable, null);
                 } else if (hit.collider.TryGetComponent(out SlotController slotController)) {
-                    if (slotController.storeObject != null &&
-                        slotController.storeObject.TryGetComponent(out NetworkHoldableComponent holdableFromStore)) {
+                    if (slotController.storeObject != null && slotController.storeObject.TryGetComponent(out NetworkHoldableComponent holdableFromStore)) {
                         CmdTryPickup(holdableFromStore, slotController);
                     }
                 } else if (hit.collider.TryGetComponent(out BuyableComponent buyableComponent)) {
@@ -139,7 +137,7 @@ public class InteractionManager : NetworkBehaviour {
 
     public void InteractTertiary() {
         if (PlayerController.LocalPlayer.currentHoldItem == null) return;
-        Ray ray = G.Instance.firstPersonCamera.ScreenPointToRay(Extensions.GetMousePosition());
+        Ray ray = G.Instance.mainCamera.ScreenPointToRay(Extensions.GetMousePosition());
 
         if (PlayerController.LocalPlayer.currentHoldItem.TryGetComponent(out IUsable usable)) {
             usable.ClientUse(ray);
@@ -151,7 +149,7 @@ public class InteractionManager : NetworkBehaviour {
     public void Throw() {
         if (PlayerController.LocalPlayer.currentHoldItem != null) {
             // Рассчитываем силу броска на основе движения игрока
-            Vector3 throwDirection = G.Instance.firstPersonCamera.transform.forward;
+            Vector3 throwDirection = G.Instance.mainCamera.transform.forward;
             Vector3 playerVelocity = PlayerController.LocalPlayer.characterController.velocity;
 
             // Добавляем скорость игрока к броску
@@ -169,7 +167,7 @@ public class InteractionManager : NetworkBehaviour {
     }
 
     public void Backpack() {
-        Ray ray = G.Instance.firstPersonCamera.ScreenPointToRay(Extensions.GetMousePosition());
+        Ray ray = G.Instance.mainCamera.ScreenPointToRay(Extensions.GetMousePosition());
         if (PlayerController.LocalPlayer.currentHoldItem == null) {
             if (PlayerController.LocalPlayer.backpack == null) {
                 if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance,

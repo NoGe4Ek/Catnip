@@ -20,7 +20,7 @@ public class NetworkHoldableComponent : NetworkBehaviour {
 
     private void Update() {
         if (!isOwned || !isHold) return;
-        Transform cameraTransform = G.Instance.firstPersonCamera.transform;
+        Transform cameraTransform = G.Instance.mainCamera.transform;
         Vector3 holdPoint = cameraTransform.position +
                             cameraTransform.forward * InteractionManager.Instance.holdDistance;
 

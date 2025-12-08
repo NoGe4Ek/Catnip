@@ -1,4 +1,5 @@
 ﻿using System;
+using Catnip.Scripts.DI;
 using Catnip.Scripts.Utils;
 using Mirror;
 using UnityEngine;
@@ -13,10 +14,29 @@ public class SlotPosition {
         this.width = width;
         this.height = height;
     }
+
+    public SlotPosition() { }
 }
 
 public class SlotController : NetworkBehaviour {
-    [SerializeField] public SlotPosition slotPosition;
+    [SyncVar] public SlotsController slotsController;
+
+    [SyncVar(hook = nameof(OnSlotPositionChange))]
+    public SlotPosition slotPosition;
+
+    private void OnSlotPositionChange(SlotPosition oldValue, SlotPosition newValue) {
+        transform.SetParent(slotsController.transform);
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.identity;
+        gameObject.layer = G.Instance.storageLayer.ToLayer();
+        transform.localPosition =
+            new Vector3(
+                slotsController.slotStartOffset + newValue.width * slotsController.slotCommonOffset +
+                (-slotsController.backgroundObject.GetLocalRenderCenter().x * slotsController.slotsSettings.width),
+                -slotsController.slotStartOffset + newValue.height * -slotsController.slotCommonOffset,
+                slotsController.slotZOffset
+            );
+    }
 
     [SyncVar(hook = nameof(OnStoreObjectChange))]
     public GameObject storeObject;
@@ -37,7 +57,8 @@ public class SlotController : NetworkBehaviour {
         // Нельзя объединить с инстанциированием, иначе сервер не сможет заспавнить этот объект внутри родителя с NetworkIdentity.
         // А вот изменить ему родителя и позицию после спавна уже можно
         newValue.transform.SetParent(transform);
-        newValue.transform.position = transform.position;
+        newValue.transform.localPosition = Vector3.zero;
+        newValue.transform.localRotation = Quaternion.identity;
     }
 
     [Server]
